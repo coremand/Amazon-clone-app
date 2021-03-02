@@ -2,11 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import reducer, { initialState } from "./Container/reducer"
+import { StateProvider } from "./Container/StateProvider"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/*this gives every component access to React context api*/}
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <App />
+    </StateProvider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
