@@ -7,6 +7,7 @@ import "./Payment.css"
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js"
 import { getBasketTotal } from '../Container/reducer';
 import CurrencyFormat from "react-currency-format";
+import { db } from "../firebase"
 
 export default function Payment() {
 
@@ -48,12 +49,23 @@ export default function Payment() {
             }
         }).then(({paymentIntent}) => {
             //PaymentIntent == Payment confirmation
+            
+            db.collection("users").doc(user?.uid).collection("orders").doc(paymentIntent.id).set({
+                basket: basket,
+                amount: paymentIntent.amount,
+                created: paymentIntent.created
+            })
 
             setSucceeded(true);
             setError(null)
             setProcessing(false)
+            //Empty basket on successful payment
+
+            dispatch({
+                type:"EMPTY_BASKET"
+            })
             //redirects user to orders page on successful payment
-            history.replaceState("/orders")
+            history.replace("/orders")
         })
     }
 

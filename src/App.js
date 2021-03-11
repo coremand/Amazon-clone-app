@@ -9,6 +9,7 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import { auth } from "./firebase"
 import { useEffect } from "react"
 import { useStateValue } from "./Container/StateProvider";
+import Orders from "./components/Orders.js"
 import './App.css';
 
 
@@ -46,6 +47,10 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/orders">
+            <Header />
+            <Orders />
           </Route>
           <Route path="/payment">
             <Header />
