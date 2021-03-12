@@ -15,6 +15,7 @@ Pending upload
 - Moment
 - Node.js
 - Express.js
+- Firebase
 ### Available Scripts
 To Clone this project, in your terminal run:
 ```
@@ -29,6 +30,7 @@ On your browser navigate to:
 http://localhost:3000
 ```
 ### Status 
-Project is completed with room for more improvements 
+Project is completed with room for more improvements.
+
 ###Contact
 Program made by [Obinna Nwabia](https://github.com/coremand)
