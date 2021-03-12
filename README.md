@@ -29,6 +29,13 @@ On your browser navigate to:
 ```
 http://localhost:3000
 ```
+To start the server:
+```
+cd functions
+```
+```
+firebase emulators:start
+```
 ### Status 
 Project is completed with room for more improvements.
 
