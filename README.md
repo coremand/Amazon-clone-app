@@ -32,5 +32,5 @@ http://localhost:3000
 ### Status 
 Project is completed with room for more improvements.
 
-###Contact
+### Contact
 Program made by [Obinna Nwabia](https://github.com/coremand)
