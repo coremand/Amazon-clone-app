@@ -11,6 +11,7 @@
         min-width: 100px;
         background-color: white;
         z-index: 1;
+        transition: transform .2s;
     }
       
 .product__rating {
@@ -39,4 +40,9 @@
 .product__info {
         height: 100px;
         margin-bottom: 15px;
+        
     }
+
+.product:hover{
+    transform: scale(.9);
+}

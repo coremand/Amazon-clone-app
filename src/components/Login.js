@@ -52,8 +52,6 @@ export default function Login() {
                     <button className="login__signInButton" onClick={signIn} type="submit">Sign In</button>
                 </form>
 
-                <p>Sign in terms and conditions</p>
-
                 <button className="login__registerButton" onClick={register} type="submit">Create Account</button>
             </div>
         </div>
